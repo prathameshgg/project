@@ -1,0 +1,141 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(to right, RGB(213, 241, 244), RGB(255, 228, 209));
+  color: #333333;
+  position: relative;
+}
+
+.typedContainer {
+  margin-bottom: 2rem;
+}
+
+.typedContainer h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #333333;
+}
+
+.typedContainer p {
+  font-size: 1.2rem;
+  color: #333333;
+  font-weight: 500;
+}
+
+.quoteContainer {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  transition: opacity 0.5s ease;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.quote {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: #333333;
+  line-height: 1.6;
+  font-weight: 500; 
+}
+
+.author {
+  font-size: 1rem;
+  color: #666666;
+  font-weight: 500;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+.fadeOut {
+  opacity: 0;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  font-weight: 500;
+}
+
+.heroButtons button {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #FEFAE0;
+  color: #333333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+}
+
+.heroButtons button:first-child {
+  background: #CCD5AE;
+  color: #333333;
+}
+
+.heroButtons button:last-child {
+  background: #FEFAE0;
+  border: 2px solid #CCD5AE;
+  color: #333333;
+}
+
+.heroButtons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .typedContainer h1 {
+    font-size: 2rem;
+  }
+
+  .quote {
+    font-size: 1.2rem;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+  }
+}
+
+.streakWrapper {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  backdrop-filter: blur(4px);
+  font-size: 1.1rem;
+}
+
+.flameEmoji {
+  font-size: 1.4em;
+  margin-right: 0.3rem;
+}
+
+.streakCount {
+  font-weight: 600;
+  color: #c2410c;
+}

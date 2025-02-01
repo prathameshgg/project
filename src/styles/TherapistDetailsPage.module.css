@@ -1,0 +1,45 @@
+.detailsPage {
+  min-height: 100vh;
+  background: #FBF3D5;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.backButton {
+  background: #CCD5AE;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.backButton:hover {
+  background: #FAEDCE;
+  transform: scale(1.05);
+}
+
+.content {
+  background: #FEFAE0;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.content p {
+  color: #555;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}

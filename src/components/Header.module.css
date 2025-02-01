@@ -1,0 +1,17 @@
+const API_BASE = '/api/';
+
+export const streakAPI = {
+  get: async () => {
+    const response = await fetch(`${API_BASE}streaks/`, {
+      credentials: 'include'
+    });
+    return response.json();
+  },
+  update: async () => {
+    const response = await fetch(`${API_BASE}update_streak/app_usage/`, {
+      method: 'POST',
+      credentials: 'include'
+    });
+    return response.json();
+  }
+}; 

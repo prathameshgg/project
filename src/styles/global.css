@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* General Reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333333;
+  background: linear-gradient(to right, #D4F1F4, #FFE4D1);
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.forum {
+  text-align: center;
+  padding: 40px;
+  background: #FEFAE0;
+  color: #333333;
+  font-style: italic;
+  border: 2px dashed #E0E5B6;
+  margin: 20px;
+  border-radius: 8px;
+}

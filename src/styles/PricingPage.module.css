@@ -1,0 +1,289 @@
+.pricingPage {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  color: #2d3e40;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+}
+
+.plansContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.planCard {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.planCard:hover {
+  transform: translateY(-5px);
+}
+
+.popular {
+  border: 2px solid #45725f;
+  transform: translateY(-10px);
+}
+
+.badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #45725f;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.planHeader {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  background: #45725f15;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  color: #45725f;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  font-size: 2.5rem;
+  color: #2d3e40;
+  margin: 1rem 0;
+}
+
+.rupeeSymbol {
+  font-family: Arial, sans-serif;
+  font-size: 1.2em;
+  margin-right: 2px;
+}
+
+.price span {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.features li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.checkIcon {
+  color: #45725f;
+  flex-shrink: 0;
+}
+
+.ctaButton {
+  width: 100%;
+  padding: 1rem;
+  background: #45725f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.ctaButton:hover {
+  background: #365a4a;
+}
+
+.pricingSection {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(to right, #D4F1F4, #FFE4D1);
+}
+
+.pricingTitle {
+  font-size: 2.5em;
+  color: #000;
+  margin-bottom: 40px;
+}
+
+.pricingCards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pricingCard {
+  background: #FFFFFF;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricingCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  background: #FAF3E0;
+}
+
+.pricingCard h2 {
+  font-size: 2em;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.pricingCard ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+}
+
+.pricingCard ul li {
+  margin: 12px 0;
+  color: #6B705C;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.subscribeButton {
+  background: #FEFAE0;
+  color: #333333;
+  padding: 18px 36px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.subscribeButton:hover {
+  background: #CCD5AE;
+  transform: scale(1.05);
+}
+
+.featuresSection {
+  padding: 50px 20px;
+  background: #FFF6E4;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featuresTitle {
+  text-align: center;
+  font-size: 2.5em;
+  color: #000;
+  margin-bottom: 40px;
+}
+
+.tierDetails {
+  background: #FFFFFF;
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.tierDetails:hover {
+  background: #FAEBD7;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.tierDetails h3 {
+  font-size: 1.8em;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.tierDetails ul {
+  list-style-type: disc;
+  margin: 0 0 20px 20px;
+  color: #333;
+  font-size: 1.1em;
+}
+
+.subFeatures {
+  list-style-type: circle;
+  margin-left: 20px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.ctaSection {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #D4F1F4, #FFE4D1);
+}
+
+.ctaSection h2 {
+  font-size: 2.5em;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.ctaSection p {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .pricingCard {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .pricingTitle,
+  .featuresTitle,
+  .ctaSection h2 {
+    font-size: 2em;
+  }
+
+  .tierDetails h3 {
+    font-size: 1.5em;
+  }
+
+  .ctaButton {
+    padding: 15px 30px;
+    font-size: 1.2em;
+  }
+}

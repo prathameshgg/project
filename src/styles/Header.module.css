@@ -1,0 +1,107 @@
+.header {
+  background: #315242;
+  color: #333333;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  color: #9ae6e6;
+  transition: color 0.3s ease;
+}
+
+.logo a:hover {
+  color: #FAEDCE;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+}
+
+.navLinks li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.5rem 1rem;
+  color: #9ae6e6;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1em;
+  transition: color 0.3s ease;
+  border-radius: 4px;
+}
+
+.navLinks li a:hover {
+  background: #5d7250;
+  border-radius: 4px;
+}
+
+.navLinks li a.active {
+  background: rgba(154, 230, 230, 0.1);
+  color: #FAEDCE;
+}
+
+.logoImage {
+  width: 50px;  /* Increased from 40px */
+  height: 50px; /* Increased from 40px */
+  transition: transform 0.3s ease;
+  object-fit: contain;
+}
+
+.navIcon {
+  flex-shrink: 0;
+}
+
+/* Make logo grow on hover */
+.logo:hover img {
+  transform: scale(1.1);
+}
+
+/* Add these new styles */
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  color: #9ae6e6;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.menuButton:hover {
+  color: #FAEDCE;
+}
+
+@media (max-width: 1024px) {
+  .navLinks {
+    display: none;
+  }
+  
+  .menuButton {
+    display: block;
+  }
+  
+  .logo {
+    margin-left: auto;
+  }
+}

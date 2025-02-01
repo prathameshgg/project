@@ -1,0 +1,61 @@
+.timerContainer {
+  padding: 20px;
+  text-align: center;
+}
+
+.durationSelect {
+  padding: 12px;
+  font-size: 1.1em;
+  border: 2px solid #CCD5AE;
+  border-radius: 8px;
+  background: #FEFAE0;
+  margin-bottom: 20px;
+  width: 200px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.durationSelect:focus {
+  outline: none;
+  border-color: #315242;
+  box-shadow: 0 0 0 3px rgba(49, 82, 66, 0.1);
+}
+
+.timerDisplay {
+  font-size: 4em;
+  font-weight: 600;
+  color: #333;
+  margin: 30px 0;
+  font-family: monospace;
+}
+
+.controls {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.controlButton {
+  background: #CCD5AE;
+  color: #333;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.controlButton:hover {
+  background: #FAEDCE;
+  transform: scale(1.1);
+}
+
+.controlButton:active {
+  transform: scale(0.95);
+}

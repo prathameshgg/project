@@ -1,0 +1,278 @@
+.communityPage {
+  display: flex;
+  height: calc(100vh - 60px); /* Adjust based on your header height */
+}
+
+.sidebar {
+  width: 250px;
+  background: #f5f6fa;
+  padding: 1rem;
+  border-right: 1px solid #ddd;
+}
+
+.roomList {
+  list-style: none;
+  padding: 0;
+}
+
+.roomList li {
+  padding: 0.75rem;
+  cursor: pointer;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+}
+
+.roomList li:hover {
+  background: #45725f15;
+}
+
+.activeRoom {
+  background: #45725f25 !important;
+  color: #45725f;
+  font-weight: 500;
+}
+
+.chatArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.messageList {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  min-height: 200px; /* Ensure it has space */
+}
+
+.message {
+  background: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.messageHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.messageText {
+  margin: 0;
+}
+
+.messageForm {
+  display: flex;
+  padding: 1rem;
+  border-top: 1px solid #eee;
+  background: white;
+}
+
+.messageForm input {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  margin-right: 1rem;
+}
+
+.messageForm button {
+  background: #45725f;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* Chat Area */
+.chatArea {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 12px;
+  margin: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Message List */
+.messageList {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Message Form */
+.messageForm {
+  position: sticky;
+  bottom: 0;
+  background: white;
+  padding: 16px;
+  border-top: 1px solid #eee;
+  display: flex;
+  gap: 8px;
+}
+
+.messageInput {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #45725f;
+  border-radius: 25px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.messageInput:focus {
+  outline: none;
+  border-color: #365a4a;
+  box-shadow: 0 0 8px rgba(69, 114, 95, 0.3);
+}
+
+.sendButton {
+  background: #45725f;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s ease;
+}
+
+.sendButton:hover {
+  background: #365a4a;
+}
+
+/* Message Styling */
+.message {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 12px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.messageContent {
+  flex: 1;
+}
+
+.username {
+  color: #45725f;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.timestamp {
+  color: #666;
+  font-size: 0.8rem;
+  margin-left: 8px;
+}
+
+/* Sidebars */
+.sidebar, .usersSidebar {
+  background: white;
+  padding: 20px;
+  margin: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Room List */
+.roomList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.roomButton {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.roomButton:hover {
+  background: #f5f6fa;
+}
+
+.roomButton.active {
+  background: #45725f;
+  color: white;
+}
+
+/* User List */
+.userList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.userButton {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.userButton:hover {
+  background: #f5f6fa;
+}
+
+/* Modal Styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+  text-align: center;
+}
+
+.adminIcon { color: #ffd700; }
+.modIcon { color: #00b4d8; }
+.userIcon { color: #666; }
+
+.loading {
+  padding: 2rem;
+  text-align: center;
+  color: #666;
+}

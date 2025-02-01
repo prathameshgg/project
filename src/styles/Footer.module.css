@@ -1,0 +1,45 @@
+.footer {
+  background-color: #FEFAE0;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #000000;
+}
+
+.emergencyInfo {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.helplineInfo {
+  margin-top: 20px;
+}
+
+.helplineInfo h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer span {
+  font-weight: bold;
+  color: #000;
+}
+
+.copyright {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+}

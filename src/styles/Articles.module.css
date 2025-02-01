@@ -1,0 +1,49 @@
+.articles {
+  padding: 40px 20px;
+}
+
+.underlinedHeading {
+  font-size: 2.5em;
+  color: #333333;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-top: 30px;
+  border-bottom: 3px solid #CCD5AE;
+  display: inline-block;
+}
+
+.articlesContainer {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  padding: 20px;
+}
+
+.articleCard {
+  border: 1px solid #E0E5B6;
+  padding: 20px;
+  width: 30%;
+  min-width: 280px;
+  background: #FAEDCE;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.articleCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.articleCard h3 {
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .articleCard {
+    width: 100%;
+  }
+}
