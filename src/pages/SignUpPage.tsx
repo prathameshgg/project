@@ -5,15 +5,53 @@ import styles from '../styles/SignUpPage.module.css';
 
 const SignUpPage = () => {
   const [isSignUp, setIsSignUp] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState('');
+  const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const selectedPlan = searchParams.get('plan');
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission
-    navigate('/');
+    setError(null);
+    
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      username: formData.get('name'),
+      email: formData.get('email'),
+      password: formData.get('password'),
+    };
+
+    try {
+      const response = await fetch('http://localhost:8000/api/accounts/register/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        navigate('/');
+      } else {
+        console.error('Registration failed');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
   };
+
+  const handleGoogleSignup = async () => {
+    setError(null);
+    try {
+      await signUpWithGoogle();
+      navigate('/dashboard');
+    } catch (error: any) {
+      setError(error.message || 'Google signup failed');
+    }
+  }
 
   return (
     <div className={`${styles.container} ${isSignUp ? styles.active : ''}`}>
@@ -28,9 +66,27 @@ const SignUpPage = () => {
               <a href="#" className={styles.icon}><Linkedin /></a>
             </div>
             <span>or use your email for registration</span>
-            <input type="text" placeholder="Name" required />
-            <input type="email" placeholder="Email" required />
-            <input type="password" placeholder="Password" required />
+            <input 
+              type="text" 
+              placeholder="Name" 
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required 
+            />
+            <input 
+              type="email" 
+              placeholder="Email" 
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required 
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
             <button type="submit">Sign Up</button>
           </form>
         </div>

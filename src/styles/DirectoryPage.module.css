@@ -1,7 +1,7 @@
 .directoryPage {
   padding: 2rem;
   min-height: 100vh;
-  background: #f5f6fa;
+  background: linear-gradient(135deg, #f0f7f4 0%, #c8e6d0 100%);
 }
 
 .introSection {
@@ -33,7 +33,11 @@
 
 .searchSection {
   padding: 2rem;
-  background: #f8f9fa;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+  margin: 2rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .searchContainer {

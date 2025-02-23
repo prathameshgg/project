@@ -14,11 +14,14 @@ const ChatBot = () => {
     baseURL: "https://openrouter.ai/api/v1",
     apiKey: import.meta.env.VITE_DEEPSEEK_API_KEY,
     defaultHeaders: {
-      "HTTP-Referer": window.location.hostname,
-      "X-Title": "SereniLink Mental Health Platform",
+      "Authorization": `Bearer ${import.meta.env.VITE_DEEPSEEK_API_KEY}`,
+      "HTTP-Referer": window.location.href,
+      "X-Title": "SereniLink",
     },
-    dangerouslyAllowBrowser: true // Required for browser usage
+    dangerouslyAllowBrowser: true
   });
+
+  console.log('API Key:', import.meta.env.VITE_DEEPSEEK_API_KEY?.substring(0, 5) + '...');
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -28,11 +31,24 @@ const ChatBot = () => {
     scrollToBottom();
   }, [messages]);
 
+  useEffect(() => {
+    if (isOpen && messages.length === 0) {
+      setMessages([{
+        content: "I'm SereniLink Assistant. How can I help you today?",
+        isUser: false
+      }]);
+    }
+  }, [isOpen]);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!input.trim()) return;
 
-    setMessages(prev => [...prev, { content: input.trim(), isUser: true }]);
+    if (isLoading) return;
+
+    // Create temporary message array
+    const newMessages = [...messages, { content: input.trim(), isUser: true }];
+    setMessages(newMessages);
     setInput('');
     setIsLoading(true);
 
@@ -41,9 +57,13 @@ const ChatBot = () => {
         model: "deepseek/deepseek-r1:free",
         messages: [
           {
-            role: "user",
-            content: input
-          }
+            role: "system",
+            content: "You are a helpful AI assistant."
+          },
+          ...newMessages.map(msg => ({
+            role: msg.isUser ? "user" : "assistant",
+            content: msg.content
+          }))
         ]
       });
 
@@ -52,6 +72,7 @@ const ChatBot = () => {
         { content: completion.choices[0].message.content || "", isUser: false }
       ]);
     } catch (error) {
+      console.error('API Error:', error);
       setMessages(prev => [
         ...prev,
         { content: 'Sorry, I encountered an error. Please try again.', isUser: false }

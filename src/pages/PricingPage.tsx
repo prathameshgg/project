@@ -26,7 +26,7 @@ const pricingPlans: PricingPlan[] = [
   {
     id: 'free',
     name: 'Free',
-    price: 'Rs. 0/month',
+    price: 'Rs. 0',
     features: [
       'Streak Tracker',
       'Meditation Tools',
@@ -40,7 +40,7 @@ const pricingPlans: PricingPlan[] = [
   {
     id: 'plus',
     name: 'Plus',
-    price: 'Rs. 49/month',
+    price: 'Rs. 49',
     features: [
       'All Free Tier Features',
       'Download Feature',
@@ -54,7 +54,7 @@ const pricingPlans: PricingPlan[] = [
   {
     id: 'premium',
     name: 'Premium',
-    price: 'Rs. 1999/6 months',
+    price: 'Rs. 499',
     features: [
       'All Free and Plus Features',
       'One-on-One Counseling',
@@ -197,6 +197,17 @@ const PricingPage = () => {
         ))}
       </div>
 
+      <section className={styles.ctaSection}>
+        <h2>Ready to Start Your Journey?</h2>
+        <p>Join thousands of users who have found peace and support through our platform.</p>
+        <button 
+          className={styles.ctaButton}
+          onClick={() => handleSubscribe('free')}
+        >
+          Start Free Trial
+        </button>
+      </section>
+
       <section className={styles.featuresSection}>
         <h2 className={styles.featuresTitle}>Features Breakdown</h2>
         {detailedFeatures.map((tier, index) => (
@@ -218,17 +229,6 @@ const PricingPage = () => {
             </ul>
           </div>
         ))}
-      </section>
-
-      <section className={styles.ctaSection}>
-        <h2>Ready to Start Your Journey?</h2>
-        <p>Join thousands of users who have found peace and support through our platform.</p>
-        <button 
-          className={styles.ctaButton}
-          onClick={() => handleSubscribe('free')}
-        >
-          Start Free Trial
-        </button>
       </section>
     </div>
   );

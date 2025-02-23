@@ -65,7 +65,7 @@ const Header = () => {
               <span>Meditation</span>
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link 
               to="/quiz"
               className={location.pathname === '/quiz' ? styles.active : ''}
@@ -73,7 +73,7 @@ const Header = () => {
               <ClipboardList size={20} className={styles.navIcon} />
               <span>Quiz</span>
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link 
               to="/directory"

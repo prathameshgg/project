@@ -74,11 +74,11 @@ const Hero = () => {
       <div className={styles.heroButtons}>
         <button 
           className="get-started-btn"
-          onClick={() => navigate('/mental-health-tests')}
+          onClick={() => navigate('/general-assessment')}
         >
           Get Started
         </button>
-        <button>Find a Therapist</button>
+        <button onClick={() => navigate('/directory')}>Find a Therapist</button>
       </div>
     </section>
   );

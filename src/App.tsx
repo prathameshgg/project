@@ -28,6 +28,7 @@ import YouthMentalHealthTest from './components/quiz/YouthMentalHealthTest';
 import ChatBot from './components/ChatBot';
 import FeedbackPage from './pages/FeedbackPage';
 import ThankYouPage from './pages/ThankYouPage';
+import GeneralAssessment from './components/GeneralAssessment';
 
 function App() {
   return (
@@ -62,6 +63,8 @@ function App() {
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/feedback" element={<FeedbackPage />} />
           <Route path="/thank-you" element={<ThankYouPage />} />
+          <Route path="/general-assessment" element={<GeneralAssessment />} />
+          <Route path="/specific-assessments" element={<SpecificAssessments />} />
         </Routes>
         <Routes>
           <Route path="*" element={location.pathname !== '/community' && <Footer />} />
